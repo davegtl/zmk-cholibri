@@ -80,7 +80,7 @@
     status = "okay";
     glidepoint: glidepoint@2a {
         compatible = "cirque,pinnacle";
-        reg = <0x2c>;
+        reg = <0x2a>;
         status = "okay";
         dr-gpios = <&gpio0 6 (GPIO_ACTIVE_HIGH)>;
 
