@@ -88,7 +88,7 @@
         sleep;
         no-taps;
     };
-
+/*
     // Rotation config, from Pete
     // This will change in the future
     // https://discord.com/channels/719497620560543766/845285481888743434/1206407883777114182
@@ -103,7 +103,7 @@
         };
     };
 };
-
+ */
 // for logging, remove later
 // &usbd {
 //     status = "okay";
