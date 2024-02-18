@@ -102,8 +102,9 @@
             x-invert;
         };
     };
-};
  */
+};
+
 // for logging, remove later
 // &usbd {
 //     status = "okay";
