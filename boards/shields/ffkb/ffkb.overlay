@@ -97,7 +97,7 @@
     
         cirque_config {
             device = <&glidepoint>;
-            xy-swap;
+//          xy-swap;
             y-invert;
             x-invert;
         };
