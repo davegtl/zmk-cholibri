@@ -99,7 +99,7 @@
             device = <&glidepoint>;
 //          xy-swap;
             y-invert;
-            x-invert;
+//          x-invert;
         };
     };
 };
