@@ -84,7 +84,7 @@
         status = "okay";
         dr-gpios = <&gpio0 8 (GPIO_ACTIVE_HIGH)>;
 
-        sensitivity = "4x";
+        sensitivity = "6x";
         sleep;
         no-taps;
     };
