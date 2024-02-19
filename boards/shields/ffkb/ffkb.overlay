@@ -86,7 +86,7 @@
 
         sensitivity = "2x";
         sleep;
-        no-taps;
+//      no-taps;
     };
 
     // Rotation config, from Pete
