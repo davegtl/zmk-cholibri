@@ -1,0 +1,54 @@
+#include "cholibri.dtsi" // Notice that the main dtsi files are included in the overlay.
+
+&default_transform {
+    col-offset = <6>;
+};
+
+&kscan0 {
+    col-gpios
+        = <&pro_micro 15 GPIO_ACTIVE_HIGH> // col6 in the schematic
+        , <&pro_micro 14 GPIO_ACTIVE_HIGH> // col5 in the schematic
+        , <&pro_micro 16 GPIO_ACTIVE_HIGH> // col4 in the schematic
+        , <&pro_micro 10 GPIO_ACTIVE_HIGH> // col3 in the schematic
+        , <&pro_micro 9 GPIO_ACTIVE_HIGH> // col2 in the schematic
+        , <&pro_micro 8 GPIO_ACTIVE_HIGH> // col1 in the schematic
+        
+        ;
+};
+
+// From Pete: https://discord.com/channels/719497620560543766/845285481888743434/1206181117296644106
+&pro_micro_i2c {
+    status = "okay";
+    glidepoint: glidepoint@2a {
+        compatible = "cirque,pinnacle";
+        reg = <0x2a>;
+        status = "okay";
+        dr-gpios = <&gpio0 8 (GPIO_ACTIVE_HIGH)>;
+
+        sensitivity = "2x";
+        sleep;
+//      no-taps;
+    };
+
+    // Rotation config, from Pete
+    // This will change in the future
+    // https://discord.com/channels/719497620560543766/845285481888743434/1206407883777114182
+    input_config {
+        compatible = "zmk,input-configs";
+    
+        cirque_config {
+            device = <&glidepoint>;
+//          xy-swap;
+            y-invert;
+//          x-invert;
+        };
+    };
+};
+
+// for logging, remove later
+// &usbd {
+//     status = "okay";
+//     cdc_acm_uart: cdc_acm_uart {
+//         compatible = "zephyr,cdc-acm-uart";
+//     };
+// };

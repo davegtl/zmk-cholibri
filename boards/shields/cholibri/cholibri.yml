@@ -8,4 +8,6 @@ exposes:
   - i2c_glidepoint
 features:
   - keys
-  - encoder
+siblings:
+  - cholibri_left
+  - cholibri_right

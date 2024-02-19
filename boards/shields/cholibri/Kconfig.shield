@@ -1,0 +1,5 @@
+config SHIELD_CHOLIBRI_LEFT
+    def_bool $(shields_list_contains,cholibri_left)
+
+config SHIELD_CHOLIBRI_RIGHT
+    def_bool $(shields_list_contains,cholibri_right)
